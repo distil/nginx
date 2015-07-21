@@ -68,6 +68,7 @@ HTTP_REALIP=NO
 HTTP_XSLT=NO
 HTTP_IMAGE_FILTER=NO
 HTTP_SUB=NO
+HTTP_SUBS=NO
 HTTP_ADDITION=NO
 HTTP_DAV=NO
 HTTP_ACCESS=YES
@@ -213,6 +214,7 @@ do
         --with-http_image_filter_module) HTTP_IMAGE_FILTER=YES      ;;
         --with-http_geoip_module)        HTTP_GEOIP=YES             ;;
         --with-http_sub_module)          HTTP_SUB=YES               ;;
+        --with-http_subs_module)         HTTP_SUBS=YES              ;;
         --with-http_dav_module)          HTTP_DAV=YES               ;;
         --with-http_flv_module)          HTTP_FLV=YES               ;;
         --with-http_mp4_module)          HTTP_MP4=YES               ;;
