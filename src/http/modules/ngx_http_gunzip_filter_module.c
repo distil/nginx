@@ -140,15 +140,6 @@ ngx_http_gunzip_header_filter(ngx_http_request_t *r)
 
     r->gzip_vary = 1;
 
-    if (!r->gzip_tested) {
-        if (ngx_http_gzip_ok(r) == NGX_OK) {
-            return ngx_http_next_header_filter(r);
-        }
-
-    } else if (r->gzip_ok) {
-        return ngx_http_next_header_filter(r);
-    }
-
     ctx = ngx_pcalloc(r->pool, sizeof(ngx_http_gunzip_ctx_t));
     if (ctx == NULL) {
         return NGX_ERROR;
